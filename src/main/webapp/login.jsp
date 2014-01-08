@@ -42,7 +42,7 @@
 							</tr>
 							<tr>
 								<td id="col5" colspan="2">
-									<input type="text" id="j_username" name="j_username" size="30" style="width:200px;">
+									<input type="text" id="username" name="username" size="30" style="width:200px;">
 								</td>
 							</tr>
 							<tr>
@@ -51,7 +51,7 @@
 							</tr>
 							<tr>
 								<td id="col7" colspan="2" style="padding-bottom:10px;">
-									<input type="password" id="j_password" name="j_password" size="30" style="width:200px;">
+									<input type="password" id="password" name="password" size="30" style="width:200px;">
 
 									<a href="#" style="font-size:9px;">
 										Esqueci minha senha</a>
