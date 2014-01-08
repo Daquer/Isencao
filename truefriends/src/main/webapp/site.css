@@ -1,0 +1,276 @@
+form {
+	border-collapse: separate;
+	color: rgb(51, 51, 51);
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	height: 277px;
+	margin-top: 0px;
+	width: 245px;
+}
+
+table {
+	-webkit-border-horizontal-spacing: 0px;
+	-webkit-border-vertical-spacing: 0px;
+	border-bottom-color: rgb(128, 128, 128);
+	border-collapse: separate;
+	border-left-color: rgb(128, 128, 128);
+	border-right-color: rgb(128, 128, 128);
+	border-top-color: rgb(128, 128, 128);
+	color: rgb(51, 51, 51);
+	display: table;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	height: 277px;
+	width: 208px;
+}
+
+body {
+	background-color: rgb(119, 149, 188);
+}
+
+div#header {
+	display: block;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 100px;
+	margin-bottom: 0px;
+	margin-left: 32.5px;
+	margin-right: 32.5px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	position: relative;
+	text-align: left;
+	width: 945px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #ffffff;
+	
+}
+
+#frame {
+	float:left;
+}
+
+.button_right {
+	width: 150px;
+	position: absolute;
+	right: 0;
+	margin-right: 41px;
+}
+
+.button_left {
+	width: 150px;
+	margin-left: 50px;
+}
+
+/*popup*/
+
+.popup {
+	background-color: #ffffff;
+	width: 750px;
+	height: 450px;
+	padding-left: 20px;
+	overflow: hidden;
+}
+
+/*Caixas*/
+
+.caixa
+{
+    padding-right: 15px;
+    overflow: hidden;
+}
+
+.caixa div
+{
+    background-color: #ffffff;
+    float: left;
+    width: 992px;
+    height: 600px; /*definir ajuste automático*/
+    padding-left: 20px;
+
+
+}
+
+.caixa table {
+	width: 900px;
+	margin-left: 50px;
+}
+
+.caixa td {
+	text-align: center;
+}
+
+.caixa h1
+{
+    color: #666666;
+    width: 285px;
+}
+
+.caixa #col1
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: #666666;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.caixa #col3
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #666666;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+
+/*menu*/
+#corpo-menu
+{
+    padding-right: 15px;
+}
+
+#corpo-menu div
+{
+    background: url(imagens/background_login.png) no-repeat;
+    width: 245px;
+    height: 289px;
+    float: left;
+}
+
+#corpo-menu #col1
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: #666666;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#corpo-menu #col2
+{
+    background-color: #666666;
+    height: 1px;
+}
+
+#corpo-menu .opcao
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #666666;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#corpo-menu .opcao a
+{
+	cursor: pointer;
+    color: #4382B0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* login */
+
+#corpo-login
+{
+    padding-right: 15px;
+}
+
+#corpo-login div
+{
+    background: url(imagens/background_login.png) no-repeat;
+    width: 245px;
+    height: 289px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#corpo-login #col1
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: #666666;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#corpo-login #col2
+{
+    background-color: #666666;
+    height: 1px;
+}
+
+#corpo-login #col3
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #666666;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#corpo-login .col46
+{
+    text-align: left;
+    color: #666666;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#corpo-login #col5
+{
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#corpo-login #col7
+{
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+#corpo-login #col8
+{
+    text-align: left;
+    font-size: 11px;
+}
+
+#corpo-login #Col9
+{
+    width: 65%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+#corpo-login a
+{
+    cursor: pointer;
+    color: #4382B0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#corpo-login a:hover
+{
+    color: #EDCD32;
+}
+

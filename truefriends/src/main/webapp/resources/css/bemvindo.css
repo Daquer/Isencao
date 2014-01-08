@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+div#cabecalho{
+	
+  background-color:rgb(36, 104, 143); 
+	
+}
+
+.vinculaEvento{
+	
+	position:relative;left:280px;top:20px;
+
+}
+
+
+div#fundo{
+	
+	
+}
+
+.verificaEvento{
+	position:relative;left:550px;top:20px;
+}
+
+h1#bemVindo{
+	
+	margin-left: 400px;
+	font-style: italic;
+}

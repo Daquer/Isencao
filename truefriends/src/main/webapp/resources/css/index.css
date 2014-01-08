@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+
+body  {    
+margin: 0;     
+padding: 0;    
+background: #FFF;
+
+
+}
+
+div#botaoEntre{
+margin-left: 580px;
+}
+
+div#indexCabecalho{
+margin-left: 450px;
+	
+}
+
+.buttonHidden{
+	
+	background:transparent;
+    font-size:0;
+    border:0;
+}
+
+
