@@ -10,7 +10,7 @@
   </filter>
   <filter-mapping>
     <filter-name>UsuarioFilter</filter-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>*.do</url-pattern>
   </filter-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
@@ -22,7 +22,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>Start</servlet-name>
-    <url-pattern>/Start</url-pattern>
+    <url-pattern>/Start.do</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>Login</servlet-name>
@@ -31,6 +31,15 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>Login</servlet-name>
-    <url-pattern>/Login</url-pattern>
+    <url-pattern>/Login.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ResultadoDeSolicitacao</servlet-name>
+    <servlet-class>servlet.ResultadoDeSolicitacaoServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResultadoDeSolicitacao</servlet-name>
+    <url-pattern>/ResultadoDeSolicitacao.do</url-pattern>
+  </servlet-mapping>  
 </web-app>

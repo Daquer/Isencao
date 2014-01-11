@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>br.com.trueFriends</groupId>
-  <artifactId>truefriends</artifactId>
+  <groupId>Isencao</groupId>
+  <artifactId>Isencao</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>truefriends Maven Webapp</name>
+  <name>Isencao Maven Webapp</name>
   <url>http://maven.apache.org</url>
 <repositories>
     <repository>
@@ -118,6 +118,6 @@
  
   </dependencies>
   <build>
-    <finalName>truefriends</finalName>
+    <finalName>Isencao</finalName>
   </build>
 </project>

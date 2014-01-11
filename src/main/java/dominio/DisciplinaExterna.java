@@ -5,16 +5,14 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Disciplina {
-
+public class DisciplinaExterna {
+	
 	@Id
 	@GeneratedValue
-	private long discplinaId;
+	private long discplinaExtId;
 	
 	private String nome;
 	
@@ -22,19 +20,17 @@ public class Disciplina {
 	
 	private int periodo;
 		
-	@ManyToOne
-	@JoinColumn(name="cursoId",nullable=false)
-	private Curso curso;
+	private String curso;
 	
-	@OneToMany(targetEntity=ItemSolicitacao.class,mappedBy="disciplina")
+	@OneToMany(targetEntity=ItemSolicitacao.class,mappedBy="disciplinaExterna")
 	private List<ItemSolicitacao> itensSolicitacao;
 
 	public long getDiscplinaId() {
-		return discplinaId;
+		return discplinaExtId;
 	}
 
-	public void setDiscplinaId(long discplinaId) {
-		this.discplinaId = discplinaId;
+	public void setDiscplinaId(long discplinaExtId) {
+		this.discplinaExtId = discplinaExtId;
 	}
 
 	public String getNome() {
@@ -61,11 +57,19 @@ public class Disciplina {
 		this.periodo = periodo;
 	}
 
-	public Curso getCurso() {
+	public String getCurso() {
 		return curso;
 	}
 
-	public void setCurso(Curso curso) {
+	public void setCurso(String curso) {
 		this.curso = curso;
+	}
+
+	public List<ItemSolicitacao> getItensSolicitacao() {
+		return itensSolicitacao;
+	}
+
+	public void setItensSolicitacao(List<ItemSolicitacao> itensSolicitacao) {
+		this.itensSolicitacao = itensSolicitacao;
 	}
 }

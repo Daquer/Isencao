@@ -26,7 +26,9 @@ public class UsuarioFilter implements Filter {
 		
 		HttpSession session = req.getSession();
 		
-		if (session.getAttribute("username")==null
+		session.setAttribute("matricula", request.getParameter("matricula"));
+		
+		if (session.getAttribute("matricula")==null
 			&& (!req.getRequestURI().endsWith("/") && !req.getRequestURI().endsWith("Login") 
 					&& !req.getRequestURI().endsWith("Start")))
 		{					
@@ -34,11 +36,10 @@ public class UsuarioFilter implements Filter {
 			request.getRequestDispatcher("login.jsp").forward(request,response);
 			return;
 		}
-
+		
 		chain.doFilter(request, response);
 	}
 	public void init(FilterConfig fConfig) throws ServletException {
 
 	}
-
 }

@@ -13,10 +13,6 @@ public class ItemSolicitacao {
 	@GeneratedValue
 	private long itemSolicitacaoId;
 	
-	private String nomeDiscExterna;
-	
-	private String codDiscExterna;
-	
 	@ManyToOne
 	@JoinColumn(name="solicitacaoId",nullable=false)
 	private Solicitacao solicitacao;
@@ -24,6 +20,10 @@ public class ItemSolicitacao {
 	@ManyToOne
 	@JoinColumn(name="disciplinaId",nullable=false)
 	private Disciplina disciplina;
+	
+	@ManyToOne
+	@JoinColumn(name="disciplinaExtId",nullable=false)
+	private DisciplinaExterna disciplinaExterna;
 
 	public long getItemSolicitacaoId() {
 		return itemSolicitacaoId;
@@ -31,22 +31,6 @@ public class ItemSolicitacao {
 
 	public void setItemSolicitacaoId(long itemSolicitacaoId) {
 		this.itemSolicitacaoId = itemSolicitacaoId;
-	}
-
-	public String getNomeDiscExterna() {
-		return nomeDiscExterna;
-	}
-
-	public void setNomeDiscExterna(String nomeDiscExterna) {
-		this.nomeDiscExterna = nomeDiscExterna;
-	}
-
-	public String getCodDiscExterna() {
-		return codDiscExterna;
-	}
-
-	public void setCodDiscExterna(String codDiscExterna) {
-		this.codDiscExterna = codDiscExterna;
 	}
 
 	public Solicitacao getSolicitacao() {
@@ -63,5 +47,13 @@ public class ItemSolicitacao {
 
 	public void setDisciplina(Disciplina disciplina) {
 		this.disciplina = disciplina;
+	}
+
+	public DisciplinaExterna getDisciplinaExterna() {
+		return disciplinaExterna;
+	}
+
+	public void setDisciplinaExterna(DisciplinaExterna disciplinaExterna) {
+		this.disciplinaExterna = disciplinaExterna;
 	}
 }

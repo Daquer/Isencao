@@ -1,14 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@page import="dominio.Aluno" %>	
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-	√Årea Restrita
+	¡Årea Restrita
 </title>
 
 <link rel="stylesheet" type="text/css" href="site.css" />
 </head>
 <body>
-	
+<%Aluno aluno = (Aluno) session.getAttribute("aluno");%>	
 	<div id="header">
 		<div id="barraSuperior">
 		</div> 
@@ -28,6 +31,14 @@
 				<table align="center" cellpadding="0" cellspacing="0">
 					<tbody>
 						<tr>
+							<td id="sessionVars" class="opcao" colspan="2">
+								Matricula: <%out.write(aluno.getMatricula().toString()); %><br />
+								Nome: <%out.write(aluno.getNome().toString()); %><br />
+								Curso: <%out.write(aluno.getCurso().getNome().toString()); %><br />
+							</td>
+						</tr>
+					
+						<tr>
 							<td id="col1" colspan="2">
 								Menu</td>
 						</tr>
@@ -36,7 +47,9 @@
 						</tr>
 						<tr>
 							<td class="opcao" colspan="2">
-								<a href="Resultado de Solicitacao.html" target="frame_corpo">Resultado de Solicita&ccedil;&atilde;o</a></td>
+								<a href="Resultado de Solicitacao.jsp" target="frame_corpo">Resultado
+									de Solicita&ccedil;&atilde;o</a>
+							</td>
 						</tr>
 						<tr>
 							<td class="opcao" colspan="2">

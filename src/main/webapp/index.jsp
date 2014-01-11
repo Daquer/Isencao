@@ -1,1 +1,1 @@
-<%response.sendRedirect("Start");%>
+<%response.sendRedirect("Start.do");%>

@@ -1,4 +1,5 @@
+/service
+/infra
 /dominio
 /servlet
 /util
-/persistence

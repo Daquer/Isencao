@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -22,7 +24,7 @@
 		</div>
 		<div id="corpo-login">
 		<div id="login">
-			<form action="Login" method="POST">
+			<form action="Login.do" method="POST">
 					<table align="center" cellpadding="0" cellspacing="0">
 						<tbody>
 							<tr>
@@ -42,7 +44,7 @@
 							</tr>
 							<tr>
 								<td id="col5" colspan="2">
-									<input type="text" id="username" name="username" size="30" style="width:200px;">
+									<input type="text" id="matricula" name="matricula" size="30" style="width:200px;">
 								</td>
 							</tr>
 							<tr>
@@ -55,6 +57,7 @@
 
 									<a href="#" style="font-size:9px;">
 										Esqueci minha senha</a>
+									<p style="color:red;"><%out.print(request.getAttribute("message")==null?"":request.getAttribute("message"));%></p>
 								</td>
 							</tr>
 							<tr>
