@@ -88,11 +88,11 @@ public class AdicionarSol extends HttpServlet {
 			solicitacao.setItensSolicitacao(itens);
 			solicitacao.setSituacao("Aguardando Analise");
 			
-			itens.get(1).set
+			//itens.get(1).
 			
 			isencaoService.adicionarSolicitacao(solicitacao);
-			isencaoService.adicionarItensSolicitacao(itens);
-			isencaoService.adicionarDisciplinaExterna(itens);
+			//isencaoService.adicionarItensSolicitacao(itens);
+			//isencaoService.adicionarDisciplinaExterna(itens);
 		}
 	}
 
