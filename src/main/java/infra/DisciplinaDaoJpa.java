@@ -15,7 +15,7 @@ public class DisciplinaDaoJpa extends GenericDaoJpa<Disciplina> implements Disci
 	
 	@Override
 	public Disciplina obterDisciplinaPorId(long disciplinaId) {
-		String consulta = "SELECT a from Disciplina a WHERE a.discplinaId = ?";
+		String consulta = "SELECT a from Disciplina a WHERE a.disciplinaId = ?";
 		Object array[] = { disciplinaId };
 		return super.obterEntidade(consulta, array);
 	}

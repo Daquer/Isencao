@@ -21,9 +21,11 @@ public class ItemSolicitacao {
 	@JoinColumn(name="disciplinaId",nullable=false)
 	private Disciplina disciplina;
 	
-	@ManyToOne
-	@JoinColumn(name="disciplinaExtId",nullable=false)
-	private DisciplinaExterna disciplinaExterna;
+	private String nomeDisExterna;
+	
+	private String codDisExterna;
+	
+	private String situacao;
 
 	public long getItemSolicitacaoId() {
 		return itemSolicitacaoId;
@@ -49,11 +51,27 @@ public class ItemSolicitacao {
 		this.disciplina = disciplina;
 	}
 
-	public DisciplinaExterna getDisciplinaExterna() {
-		return disciplinaExterna;
+	public String getNomeDisExterna() {
+		return nomeDisExterna;
 	}
 
-	public void setDisciplinaExterna(DisciplinaExterna disciplinaExterna) {
-		this.disciplinaExterna = disciplinaExterna;
+	public void setNomeDisExterna(String nomeDisExterna) {
+		this.nomeDisExterna = nomeDisExterna;
+	}
+
+	public String getCodDisExterna() {
+		return codDisExterna;
+	}
+
+	public void setCodDisExterna(String codDisExterna) {
+		this.codDisExterna = codDisExterna;
+	}
+
+	public String getSituacao() {
+		return situacao;
+	}
+
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
 	}
 }

@@ -14,7 +14,7 @@ public class Disciplina {
 
 	@Id
 	@GeneratedValue
-	private long discplinaId;
+	private long disciplinaId;
 	
 	private String nome;
 	
@@ -30,11 +30,11 @@ public class Disciplina {
 	private List<ItemSolicitacao> itensSolicitacao;
 
 	public long getDiscplinaId() {
-		return discplinaId;
+		return disciplinaId;
 	}
 
-	public void setDiscplinaId(long discplinaId) {
-		this.discplinaId = discplinaId;
+	public void setDisciplinaId(long disciplinaId) {
+		this.disciplinaId = disciplinaId;
 	}
 
 	public String getNome() {

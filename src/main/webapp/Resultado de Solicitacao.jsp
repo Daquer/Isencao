@@ -54,13 +54,17 @@ Aluno aluno = (Aluno) session.getAttribute("aluno");
 									</tr>
 									<%
 									if(!aluno.getSolicitacoes().isEmpty() && aluno.getSolicitacoes() != null) {
-										for(int i=0; i <= aluno.getSolicitacoes().size(); i++) {
+										for(int i=0; i < aluno.getSolicitacoes().size(); i++) {
 											Solicitacao solAtual = aluno.getSolicitacoes().get(i);
 											out.write("<tr><td>" + solAtual.getSolicitacaoId() + "</td>" );
-											
-											out.write("<tr><td>" + solAtual.getSituacao() + "</td>" );//deferido ou indeferido 
+											out.write("<td>"+"</td>");
+											out.write("<td>"+"</td>");
+											out.write("<td>"+"</td>");
+											out.write("<td>"+"</td>");
+											out.write("<td>" + solAtual.getSituacao() + "</td>" );//deferido ou indeferido 
+											out.write("</tr>");
 										}
-									}
+									}	
 									%>
 									<tr>
 										<td><% %></td>

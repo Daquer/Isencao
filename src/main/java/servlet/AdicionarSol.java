@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import service.IsencaoService;
 import dominio.Aluno;
 import dominio.Disciplina;
-import dominio.DisciplinaExterna;
 import dominio.ItemSolicitacao;
 import dominio.Solicitacao;
 
@@ -25,8 +24,7 @@ public class AdicionarSol extends HttpServlet {
 	IsencaoService isencaoService = new IsencaoService();
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nomeInterna = request.getParameter("nomeInterna");
-		String nomeExterna = request.getParameter("nomeExterna");
+
 		String metodo = request.getParameter("method");
 		
 		HttpSession session = request.getSession();
@@ -48,24 +46,20 @@ public class AdicionarSol extends HttpServlet {
 			
 			Disciplina disciplina = new Disciplina();
 			
-			DisciplinaExterna disciplinaExterna = new DisciplinaExterna();
-			
 			ItemSolicitacao itemSolicitacao = new ItemSolicitacao();
 			
-			disciplina = isencaoService.obterDisciplinaPorId(Integer.parseInt(request.getParameter("disciplinaInt")));
-			
-			String codInterna = request.getParameter("codInterna");
 			String codExterna = request.getParameter("codExterna");
+			String nomeExterna = request.getParameter("nomeExterna");
+			
+			disciplina = isencaoService.obterDisciplinaPorId(Integer.parseInt(request.getParameter("disciplinaInt")));
 			
 			disciplina.setCodigo(disciplina.getCodigo());
 			disciplina.setNome(disciplina.getNome());
 			
-			disciplinaExterna.setCodigo(codExterna);
-			disciplinaExterna.setNome(nomeExterna);
-			
-			
 			itemSolicitacao.setDisciplina(disciplina);
-			itemSolicitacao.setDisciplinaExterna(disciplinaExterna);
+			
+			itemSolicitacao.setNomeDisExterna(nomeExterna);
+			itemSolicitacao.setCodDisExterna(codExterna);
 	
 			itens.add(itemSolicitacao);
 			
@@ -80,19 +74,13 @@ public class AdicionarSol extends HttpServlet {
 		}
 		
 		if(metodo.equals("registrar")) {
-			DisciplinaExterna disciplinaExterna = new DisciplinaExterna();
-			
 			Solicitacao solicitacao = new Solicitacao();
 			solicitacao.setAluno(aluno);
 			solicitacao.setDataRealizacao(new Date());
 			solicitacao.setItensSolicitacao(itens);
-			solicitacao.setSituacao("Aguardando Analise");
-			
-			//itens.get(1).
+			solicitacao.setSituacao("Em analise"); //Mudar para ENUM
 			
 			isencaoService.adicionarSolicitacao(solicitacao);
-			//isencaoService.adicionarItensSolicitacao(itens);
-			//isencaoService.adicionarDisciplinaExterna(itens);
 		}
 	}
 

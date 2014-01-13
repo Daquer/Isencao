@@ -10,8 +10,7 @@
 	Adicionar Solicitacao
 </title>
 <link rel="stylesheet" type="text/css" href="site.css" />
-<script type="text/javascript" src="resources/js/jquery-1.7.2.min.js"></script>
-
+<script type="text/javascript" src="resources/js/jquery-1.7.2.min.js" ></script>
 </head>
 <body>
 <%
@@ -31,9 +30,6 @@
 					}
 					%>
 					</select>
-					<!-- <h3>Codigo:</h3> <input type="text" name="codInterna" id="codInterna"/><br />
-					<h3>Nome:</h3> <input type="text" name="nomeInterna" id="nomeInterna"/>
-					<br /> -->
 					<h2> Disciplina Externa </h2>
 					<h3>Codigo:</h3> <input type="text" name="codExterna" id="codExterna"/><br />
 					<h3>Nome:</h3> <input type="text" name="nomeExterna" id="nomeExterna"/><br />
