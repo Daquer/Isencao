@@ -26,11 +26,12 @@ public class UsuarioFilter implements Filter {
 		
 		HttpSession session = req.getSession();
 		
-		session.setAttribute("matricula", request.getParameter("matricula"));
-		
+		if(req.getRequestURI().endsWith("Login.do")) {
+			session.setAttribute("matricula", request.getParameter("matricula"));
+		}
 		if (session.getAttribute("matricula")==null
-			&& (!req.getRequestURI().endsWith("/") && !req.getRequestURI().endsWith("Login") 
-					&& !req.getRequestURI().endsWith("Start")))
+			&& (!req.getRequestURI().endsWith("/") && !req.getRequestURI().endsWith("Login.do") 
+					&& !req.getRequestURI().endsWith("Start.do")))
 		{					
 			request.setAttribute("msg","Entre com login e senha");
 			request.getRequestDispatcher("login.jsp").forward(request,response);

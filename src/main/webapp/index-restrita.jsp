@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-	Área Restrita
+	Área Restrita
 </title>
 
 <link rel="stylesheet" type="text/css" href="site.css" />
@@ -53,7 +53,7 @@
 						</tr>
 						<tr>
 							<td class="opcao" colspan="2">
-								<a href="Solicitacoes de Isencao.html" target="frame_corpo">Solicita&ccedil;&otilde;es de Isen&ccedil;&atilde;o</a></td>
+								<a href="Solicitacoes de Isencao.jsp" target="frame_corpo">Solicita&ccedil;&otilde;es de Isen&ccedil;&atilde;o</a></td>
 						</tr>
 					</tbody>
 				</table>
