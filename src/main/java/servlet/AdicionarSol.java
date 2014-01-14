@@ -77,10 +77,20 @@ public class AdicionarSol extends HttpServlet {
 			Solicitacao solicitacao = new Solicitacao();
 			solicitacao.setAluno(aluno);
 			solicitacao.setDataRealizacao(new Date());
-			solicitacao.setItensSolicitacao(itens);
+			solicitacao.setItensSolicitacao(itens);//Será necessária a inserção de cada entidade. 
+			//O genericDaojpa não tem merge e nada é cascade.
+			
 			solicitacao.setSituacao("Em analise"); //Mudar para ENUM
 			
+			for(int i=0; i <itens.size();i++) {
+				itens.get(i).setSolicitacao(solicitacao);
+				itens.get(i).getSolicitacao().setSolicitacaoId(solicitacao.getSolicitacaoId());
+				itens.get(i).setSituacao("Indefinido");
+			}
+			
+			
 			isencaoService.adicionarSolicitacao(solicitacao);
+			isencaoService.adicionarItensDeSolicitacao(itens);
 		}
 	}
 

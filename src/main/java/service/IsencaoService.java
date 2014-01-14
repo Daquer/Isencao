@@ -8,6 +8,8 @@ import dominio.Aluno;
 import dominio.AlunoRepo;
 import dominio.Disciplina;
 import dominio.DisciplinaRepo;
+import dominio.ItemSolicitacao;
+import dominio.ItemSolicitacaoRepo;
 import dominio.Solicitacao;
 import dominio.SolicitacaoRepo;
 
@@ -17,6 +19,7 @@ public class IsencaoService {
 	private AlunoRepo alunoRepo = new AlunoRepo();
 	private DisciplinaRepo disciplinaRepo = new DisciplinaRepo();
 	private SolicitacaoRepo solicitacaoRepo = new SolicitacaoRepo();
+	private ItemSolicitacaoRepo itemSolicitacaoRepo = new ItemSolicitacaoRepo();
 	
 	public boolean autenticaAluno(String matricula, String password){
 		try {
@@ -31,7 +34,6 @@ public class IsencaoService {
 	}
 
 	public Aluno obterAlunoPorMatricula(String matricula){
-		
 		try {
 			return alunoRepo.obterAlunoPorMatricula(matricula);
 		} catch(NoResultException e) {
@@ -57,5 +59,17 @@ public class IsencaoService {
 	
 	public void adicionarSolicitacao(Solicitacao solicitacao) {
 			solicitacaoRepo.adicionarSolicitacao(solicitacao);
+	}
+	
+	public Solicitacao obterSolicitacaoPorId(long solicitacaoId) {
+		try {
+			return solicitacaoRepo.obterSolicitacaoPorId(solicitacaoId);
+		} catch(NoResultException e) {
+			return null;
+		}
+	}
+	
+	public void adicionarItensDeSolicitacao(List<ItemSolicitacao> itensSolicitacao){
+		itemSolicitacaoRepo.adicionarItensDeSolicitacao(itensSolicitacao);
 	}
 }

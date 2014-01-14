@@ -34,15 +34,6 @@
     <url-pattern>/Login.do</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>ResultadoDeSolicitacao</servlet-name>
-    <servlet-class>servlet.ResultadoDeSolicitacaoServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ResultadoDeSolicitacao</servlet-name>
-    <url-pattern>/ResultadoDeSolicitacao.do</url-pattern>
-  </servlet-mapping>
-  <servlet>
     <servlet-name>AdicionarSol</servlet-name>
     <servlet-class>servlet.AdicionarSol</servlet-class>
     <load-on-startup>1</load-on-startup>
@@ -50,5 +41,14 @@
   <servlet-mapping>
     <servlet-name>AdicionarSol</servlet-name>
     <url-pattern>/AdicionarSol.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>ResultadoDeSolicitacao</servlet-name>
+    <servlet-class>servlet.ResultadoDeSolicitacao</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResultadoDeSolicitacao</servlet-name>
+    <url-pattern>/ResultadoDeSolicitacao.do</url-pattern>
   </servlet-mapping>
 </web-app>
