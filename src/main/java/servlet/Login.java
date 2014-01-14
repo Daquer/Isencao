@@ -20,14 +20,21 @@ public class Login extends HttpServlet {
 		String matricula = request.getParameter("matricula");
 		String password = request.getParameter("password");
 
-		HttpSession session = request.getSession();
+		String logout = request.getParameter("logout");
 		
-		if(service.autenticaAluno(matricula, password)){
-			session.setAttribute("aluno", service.obterAlunoPorMatricula(matricula));
-			request.getRequestDispatcher("index-restrita.jsp").forward(request,response);
+		HttpSession session = request.getSession();
+
+		if (logout != null && logout.equals("logout")) {
+			session.invalidate();
+			response.sendRedirect("login.jsp");
 		} else {
-			request.setAttribute("message", "Login inexistente");
-			request.getRequestDispatcher("login.jsp").forward(request,response);
+			if(service.autenticaAluno(matricula, password)){
+				session.setAttribute("aluno", service.obterAlunoPorMatricula(matricula));
+				request.getRequestDispatcher("index-restrita.jsp").forward(request,response);
+			} else {
+				request.setAttribute("message", "Login inexistente");
+				request.getRequestDispatcher("login.jsp").forward(request,response);
+			}
 		}
 	}
 

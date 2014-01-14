@@ -36,6 +36,21 @@ public class GenericDaoJpa<T> {
 		}
 		return true;
 	}
+	
+	public T incluirComRetorno(T entidade) {
+		EntityTransaction tx = null;
+		try {
+			tx = entityManager.getTransaction();
+			tx.begin();
+			entityManager.persist(entidade);
+			tx.commit();
+		} catch (Exception ex) {
+			if (tx != null && tx.isActive())
+				tx.rollback();
+			throw new DAOException("Erro na inclusão de objeto.", ex);
+		}
+		return entidade;
+	}
 
 	public boolean excluir(Class<T> c, Long id) {
 		EntityTransaction tx = null;

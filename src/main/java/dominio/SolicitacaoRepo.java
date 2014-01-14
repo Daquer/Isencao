@@ -9,8 +9,8 @@ public class SolicitacaoRepo {
 
 	private SolicitacaoDao dao = new SolicitacaoDaoJpa();
 
-	public void adicionarSolicitacao(Solicitacao solicitacao) {
-		dao.adicionarSolicitacao(solicitacao);
+	public Solicitacao adicionarSolicitacao(Solicitacao solicitacao) {
+		return dao.adicionarSolicitacao(solicitacao);
 	}
 	
 	public Solicitacao obterSolicitacaoPorId(long solicitacaoId) {

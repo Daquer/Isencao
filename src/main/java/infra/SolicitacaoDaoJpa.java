@@ -5,8 +5,8 @@ import dominio.Solicitacao;
 public class SolicitacaoDaoJpa extends GenericDaoJpa<Solicitacao> implements SolicitacaoDao {
 
 	@Override
-	public void adicionarSolicitacao(Solicitacao solicitacao) {
-		super.incluir(solicitacao);
+	public Solicitacao adicionarSolicitacao(Solicitacao solicitacao) {
+		return super.incluirComRetorno(solicitacao);
 	}
 	
 	@Override

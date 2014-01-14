@@ -25,8 +25,6 @@ Solicitacao solicitacao = (Solicitacao) request.getAttribute("solicitacao");
 					<input type="submit" value="Buscar" class="button_left" />
 					<table border="0" align="center" cellpadding="0" cellspacing="0">
 									<tr>
-										<th>
-										</th>
 										<th colspan="2">
 											Disciplinas Externas
 										</th>
@@ -35,9 +33,6 @@ Solicitacao solicitacao = (Solicitacao) request.getAttribute("solicitacao");
 										</th>
 									</tr>
 									<tr>
-										<th>
-											Numero da Solicitacao
-										</th>
 										<th>
 											Nome
 										</th>
@@ -58,7 +53,7 @@ Solicitacao solicitacao = (Solicitacao) request.getAttribute("solicitacao");
 									if(solicitacao != null && !solicitacao.getItensSolicitacao().isEmpty()) {
 										for(int i=0; i < solicitacao.getItensSolicitacao().size(); i++) {
 											ItemSolicitacao itemAtual = solicitacao.getItensSolicitacao().get(i);
-											out.write("<tr><td>" + itemAtual.getItemSolicitacaoId() + "</td>" );
+											
 											out.write("<td>"+ itemAtual.getDisciplina().getNome() +"</td>");
 											out.write("<td>"+ itemAtual.getDisciplina().getCodigo() + "</td>");
 											out.write("<td>"+ itemAtual.getNomeDisExterna() + "</td>");

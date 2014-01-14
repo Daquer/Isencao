@@ -79,6 +79,13 @@ List<ItemSolicitacao> itensSolicitacao = (ArrayList) session.getAttribute("itens
 		} else {
 			return true;
 		}
-	});	
+	});
+	
+	<%
+	if(request.getAttribute("idSolicitacao") != null) {
+		out.write("alert(' Solicitacao gerada. Número: "+ request.getAttribute("idSolicitacao") + ".');");
+	}
+	%>
+	
 </script>
 </body>

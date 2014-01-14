@@ -35,6 +35,7 @@
 								Matricula: <%out.write(aluno.getMatricula().toString()); %><br />
 								Nome: <%out.write(aluno.getNome().toString()); %><br />
 								Curso: <%out.write(aluno.getCurso().getNome().toString()); %><br />
+								<a href="Login.do?logout=logout">Logout</a>
 							</td>
 						</tr>
 					

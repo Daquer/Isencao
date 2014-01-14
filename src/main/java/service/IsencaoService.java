@@ -57,8 +57,8 @@ public class IsencaoService {
 		}
 	}
 	
-	public void adicionarSolicitacao(Solicitacao solicitacao) {
-			solicitacaoRepo.adicionarSolicitacao(solicitacao);
+	public Solicitacao adicionarSolicitacao(Solicitacao solicitacao) {
+			return solicitacaoRepo.adicionarSolicitacao(solicitacao);
 	}
 	
 	public Solicitacao obterSolicitacaoPorId(long solicitacaoId) {
