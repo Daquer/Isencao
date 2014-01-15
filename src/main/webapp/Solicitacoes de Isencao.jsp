@@ -25,10 +25,10 @@ List<ItemSolicitacao> itensSolicitacao = (ArrayList) session.getAttribute("itens
 									<th>
 									</th>
 										<th colspan="2">
-											Disciplinas Externas
+											Disciplinas Internas
 										</th>
 										<th colspan="2">
-											Disciplinas Internas
+											Disciplinas Externas
 										</th>
 										<th></th>
 									</tr>

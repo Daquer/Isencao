@@ -27,10 +27,10 @@ Solicitacao solicitacao = (Solicitacao) request.getAttribute("solicitacao");
 					<table border="0" align="center" cellpadding="0" cellspacing="0">
 									<tr>
 										<th colspan="2">
-											Disciplinas Externas
+											Disciplinas Internas
 										</th>
 										<th colspan="2">
-											Disciplinas Internas
+											Disciplinas Externas
 										</th>
 									</tr>
 									<tr>
@@ -49,12 +49,12 @@ Solicitacao solicitacao = (Solicitacao) request.getAttribute("solicitacao");
 										<th>
 											Situação
 										</th>
-									</tr>
+									
 									<%
 									if(solicitacao != null && !solicitacao.getItensSolicitacao().isEmpty()) {
 										for(int i=0; i < solicitacao.getItensSolicitacao().size(); i++) {
 											ItemSolicitacao itemAtual = solicitacao.getItensSolicitacao().get(i);
-											
+											out.write("<tr>");
 											out.write("<td>"+ itemAtual.getDisciplina().getNome() +"</td>");
 											out.write("<td>"+ itemAtual.getDisciplina().getCodigo() + "</td>");
 											out.write("<td>"+ itemAtual.getNomeDisExterna() + "</td>");
