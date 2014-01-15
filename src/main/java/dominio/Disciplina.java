@@ -2,6 +2,7 @@ package dominio;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,8 +17,10 @@ public class Disciplina {
 	@GeneratedValue
 	private long disciplinaId;
 	
+	@Column(columnDefinition="TEXT")
 	private String nome;
 	
+	@Column(columnDefinition="TEXT")
 	private String codigo;
 	
 	private int periodo;

@@ -15,6 +15,8 @@ import service.IsencaoService;
 import dominio.Aluno;
 import dominio.Disciplina;
 import dominio.ItemSolicitacao;
+import dominio.Situacao;
+import dominio.SituacaoItem;
 import dominio.Solicitacao;
 
 
@@ -79,14 +81,14 @@ public class AdicionarSol extends HttpServlet {
 			solicitacao.setDataRealizacao(new Date());
 			solicitacao.setItensSolicitacao(itens); 
 			
-			solicitacao.setSituacao("Em analise"); //Mudar para ENUM
+			solicitacao.setSituacao(Situacao.EMANALISE);
 			
 			solicitacao = isencaoService.adicionarSolicitacao(solicitacao);
 			
 			for(int i=0; i <itens.size();i++) {
 				itens.get(i).setSolicitacao(solicitacao);
 				itens.get(i).getSolicitacao().setSolicitacaoId(solicitacao.getSolicitacaoId());
-				itens.get(i).setSituacao("Indefinido");
+				itens.get(i).setSituacaoItem(SituacaoItem.INDEFINIDO);
 			}
 			
 			isencaoService.adicionarItensDeSolicitacao(itens);
@@ -96,7 +98,6 @@ public class AdicionarSol extends HttpServlet {
 			request.getRequestDispatcher("Solicitacoes de Isencao.jsp").forward(request, response);
 		}
 	}
-
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);

@@ -1,6 +1,8 @@
 package dominio;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -25,7 +27,8 @@ public class ItemSolicitacao {
 	
 	private String codDisExterna;
 	
-	private String situacao;
+	@Enumerated(EnumType.STRING)
+	private SituacaoItem situacaoItem;
 
 	public long getItemSolicitacaoId() {
 		return itemSolicitacaoId;
@@ -67,11 +70,11 @@ public class ItemSolicitacao {
 		this.codDisExterna = codDisExterna;
 	}
 
-	public String getSituacao() {
-		return situacao;
+	public SituacaoItem getSituacaoItem() {
+		return situacaoItem;
 	}
 
-	public void setSituacao(String situacao) {
-		this.situacao = situacao;
+	public void setSituacaoItem(SituacaoItem situacaoItem) {
+		this.situacaoItem = situacaoItem;
 	}
 }

@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +22,8 @@ public class Solicitacao {
 	
 	private Date dataRealizacao;
 	
-	private String situacao;
+	@Enumerated(EnumType.STRING)
+	private Situacao situacao;
 	
 	@ManyToOne
 	@JoinColumn(name="alunoId",nullable=false)
@@ -44,15 +47,7 @@ public class Solicitacao {
 	public void setDataRealizacao(Date dataRealizacao) {
 		this.dataRealizacao = dataRealizacao;
 	}
-
-	public String getSituacao() {
-		return situacao;
-	}
-
-	public void setSituacao(String situacao) {
-		this.situacao = situacao;
-	}
-
+	
 	public Aluno getAluno() {
 		return aluno;
 	}
@@ -67,5 +62,13 @@ public class Solicitacao {
 
 	public void setItensSolicitacao(List<ItemSolicitacao> itensSolicitacao) {
 		this.itensSolicitacao = itensSolicitacao;
+	}
+
+	public Situacao getSituacao() {
+		return situacao;
+	}
+
+	public void setSituacao(Situacao situacao) {
+		this.situacao = situacao;
 	}
 }

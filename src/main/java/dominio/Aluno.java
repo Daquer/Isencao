@@ -2,6 +2,7 @@ package dominio;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,10 +17,13 @@ public class Aluno {
 	@GeneratedValue
 	private long alunoId;
 	
+	@Column(columnDefinition="TEXT")
 	private String nome;
 	
+	@Column(columnDefinition="TEXT")
 	private String matricula;
 	
+	@Column(columnDefinition="TEXT")
 	private String senha;
 	
 	@ManyToOne

@@ -11,6 +11,7 @@
 	Resultado de Solicitacao
 </title>
 <link rel="stylesheet" type="text/css" href="site.css" />
+<script type="text/javascript" src="resources/js/jquery-1.7.2.min.js" ></script>
 </head>
 <body>
 <%
@@ -22,7 +23,7 @@ Solicitacao solicitacao = (Solicitacao) request.getAttribute("solicitacao");
 					<h1>Resultado de Solicita&ccedil;&atilde;o</h1>
 					<h2>Solicita&ccedil;&otilde;es</h2>
 					Código <input type="text" name="codigo" id="codigo" />
-					<input type="submit" value="Buscar" class="button_left" />
+					<input type="submit" value="Buscar" class="button_left" id="Buscar" name="Buscar"/>
 					<table border="0" align="center" cellpadding="0" cellspacing="0">
 									<tr>
 										<th colspan="2">
@@ -58,7 +59,7 @@ Solicitacao solicitacao = (Solicitacao) request.getAttribute("solicitacao");
 											out.write("<td>"+ itemAtual.getDisciplina().getCodigo() + "</td>");
 											out.write("<td>"+ itemAtual.getNomeDisExterna() + "</td>");
 											out.write("<td>"+ itemAtual.getCodDisExterna() +"</td>");
-											out.write("<td>" + itemAtual.getSituacao() + "</td>" );//deferido ou indeferido 
+											out.write("<td>" + itemAtual.getSituacaoItem().getValue() + "</td>" );
 											out.write("</tr>");
 										}
 									}
@@ -67,4 +68,12 @@ Solicitacao solicitacao = (Solicitacao) request.getAttribute("solicitacao");
 			</form>
 		</div>
 	</div>
+	<script>
+	$("#Buscar").click(function() {
+		if($("#codigo").val() == "") {
+			alert('Insira um valor.');
+			return false;
+		}
+	});
+	</script>
 </body>
